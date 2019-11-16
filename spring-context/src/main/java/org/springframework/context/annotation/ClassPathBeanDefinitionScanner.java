@@ -38,6 +38,9 @@ import org.springframework.util.PatternMatchUtils;
  * A bean definition scanner that detects bean candidates on the classpath,
  * registering corresponding bean definitions with a given registry ({@code BeanFactory}
  * or {@code ApplicationContext}).
+ * Bean定义扫描程序，用于检测类路径上的Bean候选对象，
+ * 使用给定的注册表（{@code BeanFactory}注册相应的Bean定义
+ * 或{@code ApplicationContext}）。
  *
  * <p>Candidate classes are detected through configurable type filters. The
  * default filters include classes that are annotated with Spring's
@@ -241,6 +244,7 @@ public class ClassPathBeanDefinitionScanner extends ClassPathScanningCandidateCo
 
 	/**
 	 * Perform a scan within the specified base packages.
+	 * 在指定的基本程序包中执行扫描。
 	 * @param basePackages the packages to check for annotated classes
 	 * @return number of beans registered
 	 */
@@ -260,8 +264,10 @@ public class ClassPathBeanDefinitionScanner extends ClassPathScanningCandidateCo
 	/**
 	 * Perform a scan within the specified base packages,
 	 * returning the registered bean definitions.
+	 * 在指定的基本程序包中执行扫描，返回已注册的bean定义。
 	 * <p>This method does <i>not</i> register an annotation config processor
 	 * but rather leaves this up to the caller.
+	 * <p>此方法<i>不</ i>注册 注解配置处理器，而是将其留给调用方。
 	 * @param basePackages the packages to check for annotated classes
 	 * @return set of beans registered if any for tooling registration purposes (never {@code null})
 	 */

@@ -33,6 +33,9 @@ import org.springframework.util.Assert;
  * Convenient adapter for programmatic registration of annotated bean classes.
  * This is an alternative to {@link ClassPathBeanDefinitionScanner}, applying
  * the same resolution of annotations but for explicitly registered classes only.
+ * 方便的适配器，用于以编程方式注册带注释的Bean类。
+ * 这是{@link ClassPathBeanDefinitionScanner}的替代方法，适用于
+ * 批注具有相同的分辨率，但仅适用于显式注册的类。
  *
  * @author Juergen Hoeller
  * @author Chris Beams

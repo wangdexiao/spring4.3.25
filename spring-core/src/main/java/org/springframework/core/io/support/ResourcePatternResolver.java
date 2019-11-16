@@ -24,25 +24,42 @@ import org.springframework.core.io.ResourceLoader;
 /**
  * Strategy interface for resolving a location pattern (for example,
  * an Ant-style path pattern) into Resource objects.
+ *  解决位置模式的策略界面（例如，
+ *  一个Ant样式的路径模式）放入Resource对象。
  *
  * <p>This is an extension to the {@link org.springframework.core.io.ResourceLoader}
  * interface. A passed-in ResourceLoader (for example, an
  * {@link org.springframework.context.ApplicationContext} passed in via
  * {@link org.springframework.context.ResourceLoaderAware} when running in a context)
  * can be checked whether it implements this extended interface too.
+ * <p>这是{@link org.springframework.core.io.ResourceLoader}的扩展
+ * 接口。 传入的ResourceLoader（例如，
+ * {@link org.springframework.context.ApplicationContext}通过传入
+ * 在上下文中运行时，@ link org.springframework.context.ResourceLoaderAware}
+ * 可以检查它是否也实现了此扩展接口。
  *
  * <p>{@link PathMatchingResourcePatternResolver} is a standalone implementation
  * that is usable outside an ApplicationContext, also used by
  * {@link ResourceArrayPropertyEditor} for populating Resource array bean properties.
+ *<p> @ link PathMatchingResourcePatternResolver}是一个独立的实现
+ * 在ApplicationContext之外可用，也由
+ * {@link ResourceArrayPropertyEditor}用于填充资源数组bean属性。
  *
  * <p>Can be used with any sort of location pattern (e.g. "/WEB-INF/*-context.xml"):
  * Input patterns have to match the strategy implementation. This interface just
  * specifies the conversion method rather than a specific pattern format.
+ * <p>可以与任何类型的位置模式一起使用（例如“ /WEB-INF/*-context.xml”）：
+ *  输入模式必须与策略实施相匹配。 这个界面只是
+ *  指定转换方法，而不是特定的模式格式。
  *
  * <p>This interface also suggests a new resource prefix "classpath*:" for all
  * matching resources from the class path. Note that the resource location is
  * expected to be a path without placeholders in this case (e.g. "/beans.xml");
  * JAR files or classes directories can contain multiple files of the same name.
+ * <p>此界面还建议为所有用户提供新的资源前缀“ classpath *：”
+ * 从类路径匹配资源。 请注意，资源位置为
+ * 在这种情况下，应该是没有占位符的路径（例如“ /beans.xml”）；
+ * JAR文件或类目录可以包含多个相同名称的文件。
  *
  * @author Juergen Hoeller
  * @since 1.0.2

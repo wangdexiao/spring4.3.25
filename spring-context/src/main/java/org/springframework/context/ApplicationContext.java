@@ -90,9 +90,13 @@ public interface ApplicationContext extends EnvironmentCapable, ListableBeanFact
 
 	/**
 	 * Expose AutowireCapableBeanFactory functionality for this context.
+	 * 针对此上下文公开AutowireCapableBeanFactory功能。
+	 *
 	 * <p>This is not typically used by application code, except for the purpose of
 	 * initializing bean instances that live outside of the application context,
 	 * applying the Spring bean lifecycle (fully or partly) to them.
+	 * <p>应用程序代码通常不使用此选项，除非是为了初始化驻留在应用程序上下文之外的bean实例，将Spring bean生命周期（全部或部分）应用于它们。
+	 *
 	 * <p>Alternatively, the internal BeanFactory exposed by the
 	 * {@link ConfigurableApplicationContext} interface offers access to the
 	 * {@link AutowireCapableBeanFactory} interface too. The present method mainly
@@ -106,6 +110,16 @@ public interface ApplicationContext extends EnvironmentCapable, ListableBeanFact
 	 * {@link AutowireCapableBeanFactory} interface, or does not hold an
 	 * autowire-capable bean factory yet (e.g. if {@code refresh()} has
 	 * never been called), or if the context has been closed already
+	 * <p>或者，通过{@link ConfigurableApplicationContext}接口公开的内部BeanFactory也提供对{@link AutowireCapableBeanFactory}接口的访问。
+	 * 本方法主要用作ApplicationContext接口上的一种方便的特定功能。 <p>
+	 *     <b>注意：从4.2开始，在关闭应用程序上下文之后，此方法将始终抛出IllegalStateException。
+	 *     </ b>在当前的Spring Framework版本中，只有可刷新的应用程序上下文才具有这种行为；
+	 *     从4.2开始，将要求所有应用程序上下文实现都必须遵守。
+	 *     如果上下文不支持{@link AutowireCapableBeanFactory}接口，
+	 *     或者还不具有支持自动连线的bean工厂（例如，如果从未调用{@code refresh（）}的话），
+	 *     请返回此上下文的AutowireCapableBeanFactory @throws IllegalStateException。 ，
+	 *     或者上下文已经关闭
+	 *
 	 * @see ConfigurableApplicationContext#refresh()
 	 * @see ConfigurableApplicationContext#getBeanFactory()
 	 */

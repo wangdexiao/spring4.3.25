@@ -165,7 +165,10 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 	 * Perform a scan within the specified base packages.
 	 * <p>Note that {@link #refresh()} must be called in order for the context
 	 * to fully process the new classes.
-	 * @param basePackages the packages to check for annotated classes
+	 * 在指定的基本程序包中执行扫描。
+	 * <p>请注意，必须先调用{@link #refresh（）}才能获得上下文
+	 * 全面处理新类。
+	 * @param basePackages the packages to check for annotated classes 检查注解类的包
 	 * @see #register(Class...)
 	 * @see #refresh()
 	 */

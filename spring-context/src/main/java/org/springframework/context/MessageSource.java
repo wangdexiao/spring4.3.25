@@ -21,13 +21,19 @@ import java.util.Locale;
 /**
  * Strategy interface for resolving messages, with support for the parameterization
  * and internationalization of such messages.
+ * 用于解析消息的策略界面，支持参数化
+ * 以及此类信息的国际化。
  *
  * <p>Spring provides two out-of-the-box implementations for production:
+ * Spring为生产提供了两种现成的实现：
  * <ul>
  * <li>{@link org.springframework.context.support.ResourceBundleMessageSource}: built
  * on top of the standard {@link java.util.ResourceBundle}, sharing its limitations.
+ * <li> {@ link org.springframework.context.support.ResourceBundleMessageSource}：已内置
+ * 在标准{@link java.util.ResourceBundle}之上，共享其局限性。
  * <li>{@link org.springframework.context.support.ReloadableResourceBundleMessageSource}:
  * highly configurable, in particular with respect to reloading message definitions.
+ * 高度可配置的，尤其是在重新加载消息定义方面。
  * </ul>
  *
  * @author Rod Johnson

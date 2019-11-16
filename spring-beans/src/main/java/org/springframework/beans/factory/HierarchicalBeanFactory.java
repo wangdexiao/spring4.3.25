@@ -19,10 +19,16 @@ package org.springframework.beans.factory;
 /**
  * Sub-interface implemented by bean factories that can be part
  * of a hierarchy.
+ * 由bean工厂实现的子接口可以是一部分
+ * 层次结构。
  *
  * <p>The corresponding {@code setParentBeanFactory} method for bean
  * factories that allow setting the parent in a configurable
  * fashion can be found in the ConfigurableBeanFactory interface.
+ *
+ * <p> bean的相应{@code setParentBeanFactory}方法
+ * 允许将父项设置为可配置的工厂
+ * 时尚可以在ConfigurableBeanFactory接口中找到。
  *
  * @author Rod Johnson
  * @author Juergen Hoeller
@@ -39,8 +45,12 @@ public interface HierarchicalBeanFactory extends BeanFactory {
 	/**
 	 * Return whether the local bean factory contains a bean of the given name,
 	 * ignoring beans defined in ancestor contexts.
+	 * 返回本地bean工厂是否包含给定名称的bean，
+	 * 忽略在祖先上下文中定义的bean。
 	 * <p>This is an alternative to {@code containsBean}, ignoring a bean
 	 * of the given name from an ancestor bean factory.
+	 * <p>这是{@code containsBean}的替代方法，忽略了一个bean
+	 * 来自祖先豆工厂的给定名称。
 	 * @param name the name of the bean to query
 	 * @return whether a bean with the given name is defined in the local factory
 	 * @see BeanFactory#containsBean
