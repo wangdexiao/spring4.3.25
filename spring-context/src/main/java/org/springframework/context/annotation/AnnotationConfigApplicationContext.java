@@ -87,7 +87,9 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 	/**
 	 * Create a new AnnotationConfigApplicationContext, scanning for bean definitions
 	 * in the given packages and automatically refreshing the context.
+	 * 创建一个新的注解配置应用上下文，扫描bean的定义在给定的包里，并且刷新上下文
 	 * @param basePackages the packages to check for annotated classes
+	 *                     去检查被注解类的包
 	 */
 	public AnnotationConfigApplicationContext(String... basePackages) {
 		this();
