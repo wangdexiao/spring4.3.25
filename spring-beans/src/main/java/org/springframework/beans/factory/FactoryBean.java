@@ -21,6 +21,8 @@ package org.springframework.beans.factory;
  * are themselves factories for individual objects. If a bean implements this
  * interface, it is used as a factory for an object to expose, not directly as a
  * bean instance that will be exposed itself.
+ * 由{@link BeanFactory}中使用的对象实现的接口，这些对象本身就是单个对象的工厂。
+ * 如果bean实现此接口，则它将用作对象公开的工厂，而不是直接用作将自身公开的bean实例。
  *
  * <p><b>NB: A bean that implements this interface cannot be used as a normal bean.</b>
  * A FactoryBean is defined in a bean style, but the object exposed for bean

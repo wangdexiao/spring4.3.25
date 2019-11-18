@@ -41,9 +41,11 @@ import org.springframework.util.StringValueResolver;
  * {@link MessageSourceAware} and/or {@link ApplicationContextAware} interfaces.
  *
  * <p>Implemented interfaces are satisfied in order of their mention above.
+ * 按照上面提到的顺序满足已实现的接口。
  *
  * <p>Application contexts will automatically register this with their
  * underlying bean factory. Applications do not use this directly.
+ * <p>应用程序上下文将自动在其基础bean工厂中注册它。 应用程序不直接使用它。
  *
  * @author Juergen Hoeller
  * @author Costin Leau
