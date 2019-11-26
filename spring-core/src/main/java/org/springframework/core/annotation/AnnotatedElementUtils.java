@@ -1523,6 +1523,11 @@ public class AnnotatedElementUtils {
 	 * during the {@link #postProcess} phase.
 	 * <p>A {@code MergedAnnotationAttributesProcessor} may optionally be
 	 * configured to {@linkplain #aggregates aggregate} results.
+	 *
+	 * {@link处理器}在{@link #process}阶段获取目标注释的{@code AnnotationAttributes}，
+	 * 然后在{@link #postProcess}阶段合并注释层次结构中较低级别的注释属性。
+	 * <p> { @ code MergedAnnotationAttributesProcessor}可以选择配置为{@linkplain #aggregatesgregation}结果。
+	 *
 	 * @since 4.2
 	 * @see AnnotationUtils#retrieveAnnotationAttributes
 	 * @see AnnotationUtils#postProcessAnnotationAttributes

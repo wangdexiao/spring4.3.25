@@ -1274,6 +1274,8 @@ public abstract class AnnotationUtils {
 
 		// Track which attribute values have already been replaced so that we can short
 		// circuit the search algorithms.
+//		跟踪哪些属性值已被替换，以便我们可以缩短
+//		巡回搜索算法。
 		Set<String> valuesAlreadyReplaced = new HashSet<String>();
 
 		if (!attributes.validated) {
@@ -1325,6 +1327,7 @@ public abstract class AnnotationUtils {
 		}
 
 		// Replace any remaining placeholders with actual default values
+//		用实际的默认值替换所有剩余的占位符
 		for (String attributeName : attributes.keySet()) {
 			if (valuesAlreadyReplaced.contains(attributeName)) {
 				continue;
@@ -1827,6 +1830,8 @@ public abstract class AnnotationUtils {
 
 	/**
 	 * Determine if the supplied {@code method} is an annotation attribute method.
+	 * 确定提供的{@code方法}是否为注释属性方法。
+	 * 注释方法没有参数 返回值不为void
 	 * @param method the method to check
 	 * @return {@code true} if the method is an attribute method
 	 * @since 4.2

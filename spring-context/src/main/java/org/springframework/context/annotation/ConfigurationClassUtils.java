@@ -108,6 +108,7 @@ abstract class ConfigurationClassUtils {
 			}
 		}
 
+		//判断是否是被 @Configuration 注解的类
 		if (isFullConfigurationCandidate(metadata)) {
 			beanDef.setAttribute(CONFIGURATION_CLASS_ATTRIBUTE, CONFIGURATION_CLASS_FULL);
 		}

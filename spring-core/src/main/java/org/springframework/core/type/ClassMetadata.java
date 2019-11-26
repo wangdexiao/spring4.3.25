@@ -30,16 +30,21 @@ public interface ClassMetadata {
 
 	/**
 	 * Return the name of the underlying class.
+	 * 返回基础类的名称。
 	 */
 	String getClassName();
 
 	/**
 	 * Return whether the underlying class represents an interface.
+	 *
+	 60/5000
+	 返回基础类是否表示接口。
 	 */
 	boolean isInterface();
 
 	/**
 	 * Return whether the underlying class represents an annotation.
+	 * 返回基础类是否表示注解
 	 * @since 4.1
 	 */
 	boolean isAnnotation();
@@ -52,6 +57,8 @@ public interface ClassMetadata {
 	/**
 	 * Return whether the underlying class represents a concrete class,
 	 * i.e. neither an interface nor an abstract class.
+	 * 返回基础类是否代表具体类，
+	 * 即既不是接口也不是抽象类。
 	 */
 	boolean isConcrete();
 
@@ -64,6 +71,7 @@ public interface ClassMetadata {
 	 * Determine whether the underlying class is independent, i.e. whether
 	 * it is a top-level class or a nested class (static inner class) that
 	 * can be constructed independently from an enclosing class.
+	 * 确定基础类是否是独立的，即它是顶级类还是可以与封闭类独立构造的嵌套类（静态内部类）。
 	 */
 	boolean isIndependent();
 
@@ -73,6 +81,11 @@ public interface ClassMetadata {
 	 * local class within a method).
 	 * <p>If this method returns {@code false}, then the underlying
 	 * class is a top-level class.
+	 * 返回基础类是否在封闭中声明
+	 * 类（即基础类是内部/嵌套类或
+	 * 方法中的本地类）。
+	 * <p>如果此方法返回{@code false}，则底层
+	 * class是顶级类。
 	 */
 	boolean hasEnclosingClass();
 
@@ -105,6 +118,9 @@ public interface ClassMetadata {
 	 * access, and private classes and interfaces declared by the class, but excludes
 	 * inherited classes and interfaces. An empty array is returned if no member classes
 	 * or interfaces exist.
+	 * 返回声明为该ClassMetadata对象表示的类的成员的所有类的名称。
+	 * 这包括公共，受保护的，默认（程序包）访问以及由该类声明的私有类和接口，但不包括继承的类和接口。
+	 * 如果不存在成员类或接口，则返回一个空数组。
 	 * @since 3.1
 	 */
 	String[] getMemberClassNames();

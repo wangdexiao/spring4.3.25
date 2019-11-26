@@ -101,7 +101,8 @@ import org.springframework.core.ResolvableType;
  *
  * <p>Bean factory implementations should support the standard bean lifecycle interfaces
  * as far as possible. The full set of initialization methods and their standard order is:
- * 
+ * <p> Bean工厂实现应尽可能支持标准Bean生命周期接口。 全套初始化方法及其标准顺序为：
+ *
  * <ol>
  * <li>BeanNameAware's {@code setBeanName}
  * <li>BeanClassLoaderAware's {@code setBeanClassLoader}
@@ -125,11 +126,18 @@ import org.springframework.core.ResolvableType;
  * </ol>
  *
  * <p>On shutdown of a bean factory, the following lifecycle methods apply:
+ * 在关闭bean工厂时，以下生命周期方法适用：
  * <ol>
  * <li>{@code postProcessBeforeDestruction} methods of DestructionAwareBeanPostProcessors
  * <li>DisposableBean's {@code destroy}
  * <li>a custom destroy-method definition
  * </ol>
+ *
+ * <ol>
+ * DestructionAwareBeanPostProcessors的<li> {@code postProcessBeforeDestruction } 方法  Destruction：毁灭
+ * <li> DisposableBean的{@code destroy}   Disposable：一次性的
+ * <li>自定义销毁方法定义
+ * </ ol>
  *
  * @author Rod Johnson
  * @author Juergen Hoeller
@@ -306,10 +314,16 @@ public interface BeanFactory {
 	 * would return an object that is assignable to the specified target type.
 	 * <p>Translates aliases back to the corresponding canonical bean name.
 	 * Will ask the parent factory if the bean cannot be found in this factory instance.
-	 * @param name the name of the bean to query
-	 * @param typeToMatch the type to match against (as a {@code ResolvableType})
-	 * @return {@code true} if the bean type matches,
-	 * {@code false} if it doesn't match or cannot be determined yet
+	 *
+	 * 检查具有给定名称的Bean是否与指定的类型匹配。
+	 * 更具体地说，检查对给定名称的{@link #getBean}调用是否会返回可分配给指定目标类型的对象。
+	 * <p>将别名转换回相应的规范bean名称。
+	 * 将询问父工厂是否在该工厂实例中找不到该bean。
+	 *
+	 * @param name the name of the bean to query 要查询的bean的名称
+	 * @param typeToMatch the type to match against (as a {@code ResolvableType}) 要匹配的类型（作为{@code ResolvableType}）
+	 * @return {@code true} if the bean type matches, 如果bean类型匹配，
+	 * {@code false} if it doesn't match or cannot be determined yet 如果不匹配或无法确定
 	 * @throws NoSuchBeanDefinitionException if there is no bean with the given name
 	 * @since 4.2
 	 * @see #getBean

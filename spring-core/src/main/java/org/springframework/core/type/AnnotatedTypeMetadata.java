@@ -25,6 +25,9 @@ import org.springframework.util.MultiValueMap;
  * or {@link MethodMetadata method}), in a form that does not necessarily require the
  * class-loading.
  *
+ * 定义对特定类型的注解（{@link AnnotationMetadata类}或{@link MethodMetadata方法}）的访问，访问方式不一定需要加载类。
+ *
+ * 对特定注解的访问
  * @author Juergen Hoeller
  * @author Mark Fisher
  * @author Mark Pollack
