@@ -284,7 +284,9 @@ public class ClassPathScanningCandidateComponentProvider implements EnvironmentC
 				}
 				if (resource.isReadable()) {
 					try {
+						//根据资源对象通过反射获取资源对象的MetadataReader
 						MetadataReader metadataReader = this.metadataReaderFactory.getMetadataReader(resource);
+						//查看配置类是否有@Conditional一系列的注解，然后是否满足注册Bean的条件
 						if (isCandidateComponent(metadataReader)) {
 							ScannedGenericBeanDefinition sbd = new ScannedGenericBeanDefinition(metadataReader);
 							sbd.setResource(resource);
@@ -331,6 +333,9 @@ public class ClassPathScanningCandidateComponentProvider implements EnvironmentC
 	 * the package search path.
 	 * <p>The default implementation resolves placeholders against system properties,
 	 * and converts a "."-based package path to a "/"-based resource path.
+	 * 将指定的基本包解析为包搜索路径的模式规范。
+	 * <p>默认实现根据系统属性解析占位符，
+	 * 并将基于“。”的程序包路径转换为基于“ /”的资源路径。
 	 * @param basePackage the base package as specified by the user
 	 * @return the pattern specification to be used for package searching
 	 */

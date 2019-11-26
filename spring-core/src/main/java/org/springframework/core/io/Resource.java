@@ -24,10 +24,13 @@ import java.net.URL;
 /**
  * Interface for a resource descriptor that abstracts from the actual
  * type of underlying resource, such as a file or class path resource.
+ * 资源描述符的接口，它从基础资源的实际类型中抽象出来，例如文件或类路径资源。
  *
  * <p>An InputStream can be opened for every resource if it exists in
  * physical form, but a URL or File handle can just be returned for
  * certain resources. The actual behavior is implementation-specific.
+ *
+ * <p>如果一个输入流以物理形式存在，则可以为每个资源打开一个InputStream，但是仅可以为某些资源返回URL或文件句柄。 实际行为是特定于实现的。
  *
  * @author Juergen Hoeller
  * @since 28.12.2003

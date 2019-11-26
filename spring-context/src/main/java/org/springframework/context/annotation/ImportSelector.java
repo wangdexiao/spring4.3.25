@@ -22,10 +22,14 @@ import org.springframework.core.type.AnnotationMetadata;
  * Interface to be implemented by types that determine which @{@link Configuration}
  * class(es) should be imported based on a given selection criteria, usually one or
  * more annotation attributes.
+ * 由类型决定的接口，这些类型根据给定的选择标准（通常是一个或多个注解属性）来确定应导入哪个@ {@link Configuration}类。
  *
  * <p>An {@link ImportSelector} may implement any of the following
  * {@link org.springframework.beans.factory.Aware Aware} interfaces,
  * and their respective methods will be called prior to {@link #selectImports}:
+ * <p> {@link ImportSelector}可以实现以下任何一项
+ * {@link org.springframework.beans.factory.Aware Aware}接口及其相应方法将在{@link #selectImports}之前调用：
+ *
  * <ul>
  * <li>{@link org.springframework.context.EnvironmentAware EnvironmentAware}</li>
  * <li>{@link org.springframework.beans.factory.BeanFactoryAware BeanFactoryAware}</li>
@@ -50,6 +54,7 @@ public interface ImportSelector {
 	/**
 	 * Select and return the names of which class(es) should be imported based on
 	 * the {@link AnnotationMetadata} of the importing @{@link Configuration} class.
+	 * 根据导入@ {@ link Configuration}类的{@link AnnotationMetadata}选择并返回要导入的类的名称。
 	 */
 	String[] selectImports(AnnotationMetadata importingClassMetadata);
 

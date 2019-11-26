@@ -20,11 +20,15 @@ package org.springframework.context.annotation;
  * A variation of {@link ImportSelector} that runs after all {@code @Configuration} beans
  * have been processed. This type of selector can be particularly useful when the selected
  * imports are {@code @Conditional}.
+ * {@link ImportSelector}的一种变体，在处理所有{@code @Configuration} bean之后运行。 当所选导入为{@code @Conditional}时，这种选择器特别有用。
  *
  * <p>Implementations can also extend the {@link org.springframework.core.Ordered}
  * interface or use the {@link org.springframework.core.annotation.Order} annotation to
  * indicate a precedence against other {@link DeferredImportSelector}s.
+ * <p>实施还可以扩展{@link org.springframework.core.Ordered}接口
+ * 或使用{@link org.springframework.core.annotation.Order}注释来指示相对于其他{@link DeferredImportSelector}的优先级。
  *
+ * Deferred：延期
  * @author Phillip Webb
  * @since 4.0
  */
